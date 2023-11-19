@@ -1,0 +1,1160 @@
+INFO	2023/11/18 15:25:30 Starting server on :4000
+INFO	2023/11/18 15:25:38 [::1]:51826 - HTTP/1.1 GET /metrics
+INFO	2023/11/18 15:25:44 [::1]:51826 - HTTP/1.1 GET /metrics
+INFO	2023/11/18 15:25:51 [::1]:51826 - HTTP/1.1 GET /metrics
+INFO	2023/11/18 15:25:52 [::1]:51826 - HTTP/1.1 GET /metrics
+INFO	2023/11/18 15:25:52 [::1]:51826 - HTTP/1.1 GET /metrics
+INFO	2023/11/18 15:25:52 [::1]:51826 - HTTP/1.1 GET /metrics
+INFO	2023/11/18 15:25:53 [::1]:51826 - HTTP/1.1 GET /metrics
+INFO	2023/11/18 15:26:04 [::1]:51826 - HTTP/1.1 GET /
+INFO	2023/11/18 15:28:06 [::1]:51826 - HTTP/1.1 GET /ping
+INFO	2023/11/18 15:28:18 [::1]:51826 - HTTP/1.1 GET /ping
+INFO	2023/11/18 15:35:52 [::1]:52311 - HTTP/1.1 GET /ping
+INFO	2023/11/18 15:35:53 [::1]:52311 - HTTP/1.1 GET /ping
+INFO	2023/11/18 15:35:59 [::1]:52311 - HTTP/1.1 GET /metrics
+INFO	2023/11/18 15:36:04 [::1]:52311 - HTTP/1.1 GET /
+INFO	2023/11/18 15:36:07 [::1]:52311 - HTTP/1.1 GET /snippet/create
+INFO	2023/11/18 15:36:10 [::1]:52311 - HTTP/1.1 GET /
+INFO	2023/11/18 15:36:13 [::1]:52311 - HTTP/1.1 GET /snippet/view/9
+INFO	2023/11/18 15:36:17 [::1]:52311 - HTTP/1.1 GET /
+INFO	2023/11/19 19:00:33 Starting server on :4000
+INFO	2023/11/19 19:00:47 [::1]:59914 - HTTP/1.1 GET /
+ERROR	2023/11/19 19:00:47 handlers.go:20: no such table: snippets
+goroutine 40 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x65
+main.(*application).serverError(0xc0001a6a80, {0x7f9950, 0xc0000a40a0}, {0x7f7940?, 0xc00008d0b0?})
+	F:/projects go/snippetBox/cmd/web/helpers.go:14 +0x58
+main.(*application).home(0xc0001a6a80, {0x7f9950, 0xc0000a40a0}, 0xc0000a82d3?)
+	F:/projects go/snippetBox/cmd/web/handlers.go:20 +0xb5
+net/http.HandlerFunc.ServeHTTP(0xc0001b8000?, {0x7f9950?, 0xc0000a40a0?}, 0x0?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/alexedwards/scs/v2.(*SessionManager).LoadAndSave.func1({0x7f9da0, 0xc0000d4000}, 0xc0000be100)
+	C:/Users/mnd33/go/pkg/mod/github.com/alexedwards/scs/v2@v2.5.0/session.go:148 +0x216
+net/http.HandlerFunc.ServeHTTP(0x2?, {0x7f9da0?, 0xc0000d4000?}, 0xb30db8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/julienschmidt/httprouter.(*Router).Handler.func1({0x7f9da0?, 0xc0000d4000?}, 0xc0000b00e0?, {0x0?, 0x0?, 0x8500015321d60598?})
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:275 +0x196
+github.com/julienschmidt/httprouter.(*Router).ServeHTTP(0xc000184660, {0x7f9da0, 0xc0000d4000}, 0xc0000be100)
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:387 +0x81c
+main.secureHeaders.func1({0x7f9da0, 0xc0000d4000}, 0x4?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:18 +0x3af
+net/http.HandlerFunc.ServeHTTP(0xc00007c320?, {0x7f9da0?, 0xc0000d4000?}, 0xc0001099c8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).logRequest.func1({0x7f9da0, 0xc0000d4000}, 0xc0000be100)
+	F:/projects go/snippetBox/cmd/web/middleware.go:25 +0x182
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x7f9da0?, 0xc0000d4000?}, 0xffffffffffffffff?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).recoverPanic.func1({0x7f9da0?, 0xc0000d4000?}, 0x15347800aa8?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:37 +0x93
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x7f9da0?, 0xc0000d4000?}, 0xf85b5?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+net/http.serverHandler.ServeHTTP({0xc00008cf30?}, {0x7f9da0, 0xc0000d4000}, 0xc0000be100)
+	C:/Program Files/Go/src/net/http/server.go:2947 +0x30c
+net/http.(*conn).serve(0xc0001b80a0, {0x7fa4d8, 0xc0001a6fc0})
+	C:/Program Files/Go/src/net/http/server.go:1991 +0x607
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3102 +0x4db
+INFO	2023/11/19 19:00:47 [::1]:59914 - HTTP/1.1 GET /favicon.ico
+INFO	2023/11/19 19:00:53 [::1]:59914 - HTTP/1.1 GET /
+ERROR	2023/11/19 19:00:53 handlers.go:20: no such table: snippets
+goroutine 40 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x65
+main.(*application).serverError(0xc0001a6a80, {0x7f9950, 0xc00007c550}, {0x7f7940?, 0xc000205e90?})
+	F:/projects go/snippetBox/cmd/web/helpers.go:14 +0x58
+main.(*application).home(0xc0001a6a80, {0x7f9950, 0xc00007c550}, 0xc00007e5d3?)
+	F:/projects go/snippetBox/cmd/web/handlers.go:20 +0xb5
+net/http.HandlerFunc.ServeHTTP(0xc0001b8000?, {0x7f9950?, 0xc00007c550?}, 0x0?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/alexedwards/scs/v2.(*SessionManager).LoadAndSave.func1({0x7f9da0, 0xc00015e2a0}, 0xc000206500)
+	C:/Users/mnd33/go/pkg/mod/github.com/alexedwards/scs/v2@v2.5.0/session.go:148 +0x216
+net/http.HandlerFunc.ServeHTTP(0x2?, {0x7f9da0?, 0xc00015e2a0?}, 0x16ae06?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/julienschmidt/httprouter.(*Router).Handler.func1({0x7f9da0?, 0xc00015e2a0?}, 0xc000029080?, {0x0?, 0x0?, 0x850000000016ad80?})
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:275 +0x196
+github.com/julienschmidt/httprouter.(*Router).ServeHTTP(0xc000184660, {0x7f9da0, 0xc00015e2a0}, 0xc000206500)
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:387 +0x81c
+main.secureHeaders.func1({0x7f9da0, 0xc00015e2a0}, 0x4?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:18 +0x3af
+net/http.HandlerFunc.ServeHTTP(0xc00007c320?, {0x7f9da0?, 0xc00015e2a0?}, 0xc0001099c8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).logRequest.func1({0x7f9da0, 0xc00015e2a0}, 0xc000206500)
+	F:/projects go/snippetBox/cmd/web/middleware.go:25 +0x182
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x7f9da0?, 0xc00015e2a0?}, 0xffffffffffffffff?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).recoverPanic.func1({0x7f9da0?, 0xc00015e2a0?}, 0x15321d6a370?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:37 +0x93
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x7f9da0?, 0xc00015e2a0?}, 0xf85b5?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+net/http.serverHandler.ServeHTTP({0xc00008cf30?}, {0x7f9da0, 0xc00015e2a0}, 0xc000206500)
+	C:/Program Files/Go/src/net/http/server.go:2947 +0x30c
+net/http.(*conn).serve(0xc0001b80a0, {0x7fa4d8, 0xc0001a6fc0})
+	C:/Program Files/Go/src/net/http/server.go:1991 +0x607
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3102 +0x4db
+INFO	2023/11/19 19:03:26 Starting server on :4000
+INFO	2023/11/19 19:03:31 [::1]:60023 - HTTP/1.1 GET /
+ERROR	2023/11/19 19:03:31 handlers.go:20: no such table: snippets
+goroutine 28 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x65
+main.(*application).serverError(0xc00008d3b0, {0x1369a70, 0xc0002c0000}, {0x1367a60?, 0xc0002821b0?})
+	F:/projects go/snippetBox/cmd/web/helpers.go:14 +0x58
+main.(*application).home(0xc00008d3b0, {0x1369a70, 0xc0002c0000}, 0xc0002b2033?)
+	F:/projects go/snippetBox/cmd/web/handlers.go:20 +0xb5
+net/http.HandlerFunc.ServeHTTP(0xc0000ce000?, {0x1369a70?, 0xc0002c0000?}, 0x0?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/alexedwards/scs/v2.(*SessionManager).LoadAndSave.func1({0x1369ec0, 0xc0002b4000}, 0xc0001b6200)
+	C:/Users/mnd33/go/pkg/mod/github.com/alexedwards/scs/v2@v2.5.0/session.go:148 +0x216
+net/http.HandlerFunc.ServeHTTP(0x2?, {0x1369ec0?, 0xc0002b4000?}, 0x16a0db8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/julienschmidt/httprouter.(*Router).Handler.func1({0x1369ec0?, 0xc0002b4000?}, 0xc000280020?, {0x0?, 0x0?, 0xb90002c833960eb8?})
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:275 +0x196
+github.com/julienschmidt/httprouter.(*Router).ServeHTTP(0xc000097320, {0x1369ec0, 0xc0002b4000}, 0xc0001b6200)
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:387 +0x81c
+main.secureHeaders.func1({0x1369ec0, 0xc0002b4000}, 0x4?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:18 +0x3af
+net/http.HandlerFunc.ServeHTTP(0xc000192000?, {0x1369ec0?, 0xc0002b4000?}, 0xc0001099c8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).logRequest.func1({0x1369ec0, 0xc0002b4000}, 0xc0001b6200)
+	F:/projects go/snippetBox/cmd/web/middleware.go:25 +0x182
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1369ec0?, 0xc0002b4000?}, 0xffffffffffffffff?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).recoverPanic.func1({0x1369ec0?, 0xc0002b4000?}, 0x2c8597713b0?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:37 +0x93
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1369ec0?, 0xc0002b4000?}, 0xc685b5?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+net/http.serverHandler.ServeHTTP({0xc000189830?}, {0x1369ec0, 0xc0002b4000}, 0xc0001b6200)
+	C:/Program Files/Go/src/net/http/server.go:2947 +0x30c
+net/http.(*conn).serve(0xc0000ce0a0, {0x136a5f8, 0xc00008d8f0})
+	C:/Program Files/Go/src/net/http/server.go:1991 +0x607
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3102 +0x4db
+INFO	2023/11/19 19:03:32 [::1]:60023 - HTTP/1.1 GET /
+ERROR	2023/11/19 19:03:32 handlers.go:20: no such table: snippets
+goroutine 28 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x65
+main.(*application).serverError(0xc00008d3b0, {0x1369a70, 0xc0002c00a0}, {0x1367a60?, 0xc0002822d0?})
+	F:/projects go/snippetBox/cmd/web/helpers.go:14 +0x58
+main.(*application).home(0xc00008d3b0, {0x1369a70, 0xc0002c00a0}, 0xc0002b20f3?)
+	F:/projects go/snippetBox/cmd/web/handlers.go:20 +0xb5
+net/http.HandlerFunc.ServeHTTP(0xc0000ce000?, {0x1369a70?, 0xc0002c00a0?}, 0x0?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/alexedwards/scs/v2.(*SessionManager).LoadAndSave.func1({0x1369ec0, 0xc0002b40e0}, 0xc00028c200)
+	C:/Users/mnd33/go/pkg/mod/github.com/alexedwards/scs/v2@v2.5.0/session.go:148 +0x216
+net/http.HandlerFunc.ServeHTTP(0x2?, {0x1369ec0?, 0xc0002b40e0?}, 0xcdae06?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/julienschmidt/httprouter.(*Router).Handler.func1({0x1369ec0?, 0xc0002b40e0?}, 0xc000280180?, {0x0?, 0x0?, 0xb900000000cdad80?})
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:275 +0x196
+github.com/julienschmidt/httprouter.(*Router).ServeHTTP(0xc000097320, {0x1369ec0, 0xc0002b40e0}, 0xc00028c200)
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:387 +0x81c
+main.secureHeaders.func1({0x1369ec0, 0xc0002b40e0}, 0x4?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:18 +0x3af
+net/http.HandlerFunc.ServeHTTP(0xc000192000?, {0x1369ec0?, 0xc0002b40e0?}, 0xc0001099c8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).logRequest.func1({0x1369ec0, 0xc0002b40e0}, 0xc00028c200)
+	F:/projects go/snippetBox/cmd/web/middleware.go:25 +0x182
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1369ec0?, 0xc0002b40e0?}, 0xffffffffffffffff?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).recoverPanic.func1({0x1369ec0?, 0xc0002b40e0?}, 0x2c8597713b0?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:37 +0x93
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1369ec0?, 0xc0002b40e0?}, 0xc685b5?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+net/http.serverHandler.ServeHTTP({0xc000189830?}, {0x1369ec0, 0xc0002b40e0}, 0xc00028c200)
+	C:/Program Files/Go/src/net/http/server.go:2947 +0x30c
+net/http.(*conn).serve(0xc0000ce0a0, {0x136a5f8, 0xc00008d8f0})
+	C:/Program Files/Go/src/net/http/server.go:1991 +0x607
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3102 +0x4db
+INFO	2023/11/19 19:05:54 Starting server on :4000
+INFO	2023/11/19 19:06:03 [::1]:55700 - HTTP/1.1 GET /
+ERROR	2023/11/19 19:06:03 handlers.go:20: no such table: snippets
+goroutine 45 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x65
+main.(*application).serverError(0xc0001cc8d0, {0x12e9a70, 0xc00007c410}, {0x12e7a60?, 0xc000206690?})
+	F:/projects go/snippetBox/cmd/web/helpers.go:14 +0x58
+main.(*application).home(0xc0001cc8d0, {0x12e9a70, 0xc00007c410}, 0xc00007e213?)
+	F:/projects go/snippetBox/cmd/web/handlers.go:20 +0xb5
+net/http.HandlerFunc.ServeHTTP(0xc0001a60a0?, {0x12e9a70?, 0xc00007c410?}, 0x0?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/alexedwards/scs/v2.(*SessionManager).LoadAndSave.func1({0x12e9ec0, 0xc00015e1c0}, 0xc000202100)
+	C:/Users/mnd33/go/pkg/mod/github.com/alexedwards/scs/v2@v2.5.0/session.go:148 +0x216
+net/http.HandlerFunc.ServeHTTP(0x2?, {0x12e9ec0?, 0xc00015e1c0?}, 0xc5ae06?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/julienschmidt/httprouter.(*Router).Handler.func1({0x12e9ec0?, 0xc00015e1c0?}, 0xc000028e80?, {0x0?, 0x0?, 0x8f00000000c5ad80?})
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:275 +0x196
+github.com/julienschmidt/httprouter.(*Router).ServeHTTP(0xc0001851a0, {0x12e9ec0, 0xc00015e1c0}, 0xc000202100)
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:387 +0x81c
+main.secureHeaders.func1({0x12e9ec0, 0xc00015e1c0}, 0x4?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:18 +0x3af
+net/http.HandlerFunc.ServeHTTP(0xc000192000?, {0x12e9ec0?, 0xc00015e1c0?}, 0xc00010d9c8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).logRequest.func1({0x12e9ec0, 0xc00015e1c0}, 0xc000202100)
+	F:/projects go/snippetBox/cmd/web/middleware.go:25 +0x182
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x12e9ec0?, 0xc00015e1c0?}, 0xffffffffffffffff?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).recoverPanic.func1({0x12e9ec0?, 0xc00015e1c0?}, 0x1e77104a0c8?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:37 +0x93
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x12e9ec0?, 0xc00015e1c0?}, 0xbe85b5?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+net/http.serverHandler.ServeHTTP({0xc000206510?}, {0x12e9ec0, 0xc00015e1c0}, 0xc000202100)
+	C:/Program Files/Go/src/net/http/server.go:2947 +0x30c
+net/http.(*conn).serve(0xc0001a6140, {0x12ea5f8, 0xc0001cce10})
+	C:/Program Files/Go/src/net/http/server.go:1991 +0x607
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3102 +0x4db
+INFO	2023/11/19 19:08:11 Starting server on :4000
+INFO	2023/11/19 19:08:18 [::1]:55781 - HTTP/1.1 GET /
+ERROR	2023/11/19 19:08:18 handlers.go:20: no such table: snippets
+goroutine 40 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x65
+main.(*application).serverError(0xc0001a2c30, {0x12d9a70, 0xc0002ba000}, {0x12d7a60?, 0xc0002821b0?})
+	F:/projects go/snippetBox/cmd/web/helpers.go:14 +0x58
+main.(*application).home(0xc0001a2c30, {0x12d9a70, 0xc0002ba000}, 0xc0002ae033?)
+	F:/projects go/snippetBox/cmd/web/handlers.go:20 +0xb5
+net/http.HandlerFunc.ServeHTTP(0xc0001be000?, {0x12d9a70?, 0xc0002ba000?}, 0x0?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/alexedwards/scs/v2.(*SessionManager).LoadAndSave.func1({0x12d9ec0, 0xc0002b0000}, 0xc000290000)
+	C:/Users/mnd33/go/pkg/mod/github.com/alexedwards/scs/v2@v2.5.0/session.go:148 +0x216
+net/http.HandlerFunc.ServeHTTP(0x2?, {0x12d9ec0?, 0xc0002b0000?}, 0x1610db8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/julienschmidt/httprouter.(*Router).Handler.func1({0x12d9ec0?, 0xc0002b0000?}, 0xc000280020?, {0x0?, 0x0?, 0xe50001de44440eb8?})
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:275 +0x196
+github.com/julienschmidt/httprouter.(*Router).ServeHTTP(0xc0001846c0, {0x12d9ec0, 0xc0002b0000}, 0xc000290000)
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:387 +0x81c
+main.secureHeaders.func1({0x12d9ec0, 0xc0002b0000}, 0x4?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:18 +0x3af
+net/http.HandlerFunc.ServeHTTP(0xc00007c320?, {0x12d9ec0?, 0xc0002b0000?}, 0xc0001099c8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).logRequest.func1({0x12d9ec0, 0xc0002b0000}, 0xc000290000)
+	F:/projects go/snippetBox/cmd/web/middleware.go:25 +0x182
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x12d9ec0?, 0xc0002b0000?}, 0xffffffffffffffff?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).recoverPanic.func1({0x12d9ec0?, 0xc0002b0000?}, 0x1de6a2513b0?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:37 +0x93
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x12d9ec0?, 0xc0002b0000?}, 0xbd85b5?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+net/http.serverHandler.ServeHTTP({0xc000282030?}, {0x12d9ec0, 0xc0002b0000}, 0xc000290000)
+	C:/Program Files/Go/src/net/http/server.go:2947 +0x30c
+net/http.(*conn).serve(0xc0001be0a0, {0x12da5f8, 0xc0001a3170})
+	C:/Program Files/Go/src/net/http/server.go:1991 +0x607
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3102 +0x4db
+INFO	2023/11/19 19:08:18 [::1]:55781 - HTTP/1.1 GET /
+ERROR	2023/11/19 19:08:18 handlers.go:20: no such table: snippets
+goroutine 40 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x65
+main.(*application).serverError(0xc0001a2c30, {0x12d9a70, 0xc0002ba0a0}, {0x12d7a60?, 0xc0002822d0?})
+	F:/projects go/snippetBox/cmd/web/helpers.go:14 +0x58
+main.(*application).home(0xc0001a2c30, {0x12d9a70, 0xc0002ba0a0}, 0xc0002ae0f3?)
+	F:/projects go/snippetBox/cmd/web/handlers.go:20 +0xb5
+net/http.HandlerFunc.ServeHTTP(0xc0001be000?, {0x12d9a70?, 0xc0002ba0a0?}, 0x0?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/alexedwards/scs/v2.(*SessionManager).LoadAndSave.func1({0x12d9ec0, 0xc0002b00e0}, 0xc000290200)
+	C:/Users/mnd33/go/pkg/mod/github.com/alexedwards/scs/v2@v2.5.0/session.go:148 +0x216
+net/http.HandlerFunc.ServeHTTP(0x2?, {0x12d9ec0?, 0xc0002b00e0?}, 0xc4ae06?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/julienschmidt/httprouter.(*Router).Handler.func1({0x12d9ec0?, 0xc0002b00e0?}, 0xc000280180?, {0x0?, 0x0?, 0xe500000000c4ad80?})
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:275 +0x196
+github.com/julienschmidt/httprouter.(*Router).ServeHTTP(0xc0001846c0, {0x12d9ec0, 0xc0002b00e0}, 0xc000290200)
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:387 +0x81c
+main.secureHeaders.func1({0x12d9ec0, 0xc0002b00e0}, 0x4?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:18 +0x3af
+net/http.HandlerFunc.ServeHTTP(0xc00007c320?, {0x12d9ec0?, 0xc0002b00e0?}, 0xc0001099c8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).logRequest.func1({0x12d9ec0, 0xc0002b00e0}, 0xc000290200)
+	F:/projects go/snippetBox/cmd/web/middleware.go:25 +0x182
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x12d9ec0?, 0xc0002b00e0?}, 0xffffffffffffffff?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).recoverPanic.func1({0x12d9ec0?, 0xc0002b00e0?}, 0x1de6a2513b0?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:37 +0x93
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x12d9ec0?, 0xc0002b00e0?}, 0xbd85b5?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+net/http.serverHandler.ServeHTTP({0xc000282030?}, {0x12d9ec0, 0xc0002b00e0}, 0xc000290200)
+	C:/Program Files/Go/src/net/http/server.go:2947 +0x30c
+net/http.(*conn).serve(0xc0001be0a0, {0x12da5f8, 0xc0001a3170})
+	C:/Program Files/Go/src/net/http/server.go:1991 +0x607
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3102 +0x4db
+INFO	2023/11/19 19:12:42 [::1]:55781 - HTTP/1.1 GET /
+ERROR	2023/11/19 19:12:42 handlers.go:20: no such table: snippets
+goroutine 40 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x65
+main.(*application).serverError(0xc0001a2c30, {0x12d9a70, 0xc0002ba0f0}, {0x12d7a60?, 0xc000282450?})
+	F:/projects go/snippetBox/cmd/web/helpers.go:14 +0x58
+main.(*application).home(0xc0001a2c30, {0x12d9a70, 0xc0002ba0f0}, 0xc0002ae153?)
+	F:/projects go/snippetBox/cmd/web/handlers.go:20 +0xb5
+net/http.HandlerFunc.ServeHTTP(0xc0001be000?, {0x12d9a70?, 0xc0002ba0f0?}, 0x0?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/alexedwards/scs/v2.(*SessionManager).LoadAndSave.func1({0x12d9ec0, 0xc0002b01c0}, 0xc000198300)
+	C:/Users/mnd33/go/pkg/mod/github.com/alexedwards/scs/v2@v2.5.0/session.go:148 +0x216
+net/http.HandlerFunc.ServeHTTP(0x2?, {0x12d9ec0?, 0xc0002b01c0?}, 0xc4ae06?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/julienschmidt/httprouter.(*Router).Handler.func1({0x12d9ec0?, 0xc0002b01c0?}, 0xc0002802b0?, {0x0?, 0x0?, 0xe500000000c4ad80?})
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:275 +0x196
+github.com/julienschmidt/httprouter.(*Router).ServeHTTP(0xc0001846c0, {0x12d9ec0, 0xc0002b01c0}, 0xc000198300)
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:387 +0x81c
+main.secureHeaders.func1({0x12d9ec0, 0xc0002b01c0}, 0x4?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:18 +0x3af
+net/http.HandlerFunc.ServeHTTP(0xc00007c320?, {0x12d9ec0?, 0xc0002b01c0?}, 0xc0001099c8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).logRequest.func1({0x12d9ec0, 0xc0002b01c0}, 0xc000198300)
+	F:/projects go/snippetBox/cmd/web/middleware.go:25 +0x182
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x12d9ec0?, 0xc0002b01c0?}, 0xffffffffffffffff?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).recoverPanic.func1({0x12d9ec0?, 0xc0002b01c0?}, 0x1de6a2513b0?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:37 +0x93
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x12d9ec0?, 0xc0002b01c0?}, 0xbd85b5?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+net/http.serverHandler.ServeHTTP({0xc000282030?}, {0x12d9ec0, 0xc0002b01c0}, 0xc000198300)
+	C:/Program Files/Go/src/net/http/server.go:2947 +0x30c
+net/http.(*conn).serve(0xc0001be0a0, {0x12da5f8, 0xc0001a3170})
+	C:/Program Files/Go/src/net/http/server.go:1991 +0x607
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3102 +0x4db
+INFO	2023/11/19 19:12:43 [::1]:55781 - HTTP/1.1 GET /
+ERROR	2023/11/19 19:12:43 handlers.go:20: no such table: snippets
+goroutine 40 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x65
+main.(*application).serverError(0xc0001a2c30, {0x12d9a70, 0xc0000a4140}, {0x12d7a60?, 0xc00008de60?})
+	F:/projects go/snippetBox/cmd/web/helpers.go:14 +0x58
+main.(*application).home(0xc0001a2c30, {0x12d9a70, 0xc0000a4140}, 0xc0000a85d3?)
+	F:/projects go/snippetBox/cmd/web/handlers.go:20 +0xb5
+net/http.HandlerFunc.ServeHTTP(0xc0001be000?, {0x12d9a70?, 0xc0000a4140?}, 0x0?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/alexedwards/scs/v2.(*SessionManager).LoadAndSave.func1({0x12d9ec0, 0xc0000f0000}, 0xc000290600)
+	C:/Users/mnd33/go/pkg/mod/github.com/alexedwards/scs/v2@v2.5.0/session.go:148 +0x216
+net/http.HandlerFunc.ServeHTTP(0x2?, {0x12d9ec0?, 0xc0000f0000?}, 0xc4ae06?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/julienschmidt/httprouter.(*Router).Handler.func1({0x12d9ec0?, 0xc0000f0000?}, 0xc0000b6130?, {0x0?, 0x0?, 0xe500000000c4ad80?})
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:275 +0x196
+github.com/julienschmidt/httprouter.(*Router).ServeHTTP(0xc0001846c0, {0x12d9ec0, 0xc0000f0000}, 0xc000290600)
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:387 +0x81c
+main.secureHeaders.func1({0x12d9ec0, 0xc0000f0000}, 0x4?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:18 +0x3af
+net/http.HandlerFunc.ServeHTTP(0xc00007c320?, {0x12d9ec0?, 0xc0000f0000?}, 0xc0001099c8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).logRequest.func1({0x12d9ec0, 0xc0000f0000}, 0xc000290600)
+	F:/projects go/snippetBox/cmd/web/middleware.go:25 +0x182
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x12d9ec0?, 0xc0000f0000?}, 0xffffffffffffffff?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).recoverPanic.func1({0x12d9ec0?, 0xc0000f0000?}, 0x1de44650aa8?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:37 +0x93
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x12d9ec0?, 0xc0000f0000?}, 0xbd85b5?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+net/http.serverHandler.ServeHTTP({0xc000282030?}, {0x12d9ec0, 0xc0000f0000}, 0xc000290600)
+	C:/Program Files/Go/src/net/http/server.go:2947 +0x30c
+net/http.(*conn).serve(0xc0001be0a0, {0x12da5f8, 0xc0001a3170})
+	C:/Program Files/Go/src/net/http/server.go:1991 +0x607
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3102 +0x4db
+INFO	2023/11/19 19:12:43 [::1]:55781 - HTTP/1.1 GET /
+ERROR	2023/11/19 19:12:43 handlers.go:20: no such table: snippets
+goroutine 40 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x65
+main.(*application).serverError(0xc0001a2c30, {0x12d9a70, 0xc0001a6690}, {0x12d7a60?, 0xc0001a33e0?})
+	F:/projects go/snippetBox/cmd/web/helpers.go:14 +0x58
+main.(*application).home(0xc0001a2c30, {0x12d9a70, 0xc0001a6690}, 0xc0001d2093?)
+	F:/projects go/snippetBox/cmd/web/handlers.go:20 +0xb5
+net/http.HandlerFunc.ServeHTTP(0xc0001be000?, {0x12d9a70?, 0xc0001a6690?}, 0x0?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/alexedwards/scs/v2.(*SessionManager).LoadAndSave.func1({0x12d9ec0, 0xc0001e0000}, 0xc0000d0500)
+	C:/Users/mnd33/go/pkg/mod/github.com/alexedwards/scs/v2@v2.5.0/session.go:148 +0x216
+net/http.HandlerFunc.ServeHTTP(0x2?, {0x12d9ec0?, 0xc0001e0000?}, 0x1610db8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/julienschmidt/httprouter.(*Router).Handler.func1({0x12d9ec0?, 0xc0001e0000?}, 0xc00019e550?, {0x0?, 0x0?, 0xe50001de44440a28?})
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:275 +0x196
+github.com/julienschmidt/httprouter.(*Router).ServeHTTP(0xc0001846c0, {0x12d9ec0, 0xc0001e0000}, 0xc0000d0500)
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:387 +0x81c
+main.secureHeaders.func1({0x12d9ec0, 0xc0001e0000}, 0x4?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:18 +0x3af
+net/http.HandlerFunc.ServeHTTP(0xc00007c320?, {0x12d9ec0?, 0xc0001e0000?}, 0xc0001099c8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).logRequest.func1({0x12d9ec0, 0xc0001e0000}, 0xc0000d0500)
+	F:/projects go/snippetBox/cmd/web/middleware.go:25 +0x182
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x12d9ec0?, 0xc0001e0000?}, 0xffffffffffffffff?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).recoverPanic.func1({0x12d9ec0?, 0xc0001e0000?}, 0x1de44652db8?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:37 +0x93
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x12d9ec0?, 0xc0001e0000?}, 0xbd85b5?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+net/http.serverHandler.ServeHTTP({0xc000282030?}, {0x12d9ec0, 0xc0001e0000}, 0xc0000d0500)
+	C:/Program Files/Go/src/net/http/server.go:2947 +0x30c
+net/http.(*conn).serve(0xc0001be0a0, {0x12da5f8, 0xc0001a3170})
+	C:/Program Files/Go/src/net/http/server.go:1991 +0x607
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3102 +0x4db
+INFO	2023/11/19 19:16:26 Starting server on :4000
+INFO	2023/11/19 19:16:35 [::1]:51285 - HTTP/1.1 GET /
+ERROR	2023/11/19 19:16:35 handlers.go:20: no such table: snippets
+goroutine 16 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x65
+main.(*application).serverError(0xc000205140, {0x1359a70, 0xc0002c0000}, {0x1357a60?, 0xc0002821b0?})
+	F:/projects go/snippetBox/cmd/web/helpers.go:14 +0x58
+main.(*application).home(0xc000205140, {0x1359a70, 0xc0002c0000}, 0xc0002b2033?)
+	F:/projects go/snippetBox/cmd/web/handlers.go:20 +0xb5
+net/http.HandlerFunc.ServeHTTP(0xc0000014a0?, {0x1359a70?, 0xc0002c0000?}, 0x0?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/alexedwards/scs/v2.(*SessionManager).LoadAndSave.func1({0x1359ec0, 0xc0002b4000}, 0xc0000b2400)
+	C:/Users/mnd33/go/pkg/mod/github.com/alexedwards/scs/v2@v2.5.0/session.go:148 +0x216
+net/http.HandlerFunc.ServeHTTP(0x2?, {0x1359ec0?, 0xc0002b4000?}, 0x1690db8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/julienschmidt/httprouter.(*Router).Handler.func1({0x1359ec0?, 0xc0002b4000?}, 0xc000280020?, {0x0?, 0x0?, 0x60000200009a0eb8?})
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:275 +0x196
+github.com/julienschmidt/httprouter.(*Router).ServeHTTP(0xc00007ac60, {0x1359ec0, 0xc0002b4000}, 0xc0000b2400)
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:387 +0x81c
+main.secureHeaders.func1({0x1359ec0, 0xc0002b4000}, 0x4?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:18 +0x3af
+net/http.HandlerFunc.ServeHTTP(0xc00007c320?, {0x1359ec0?, 0xc0002b4000?}, 0xc0001099c8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).logRequest.func1({0x1359ec0, 0xc0002b4000}, 0xc0000b2400)
+	F:/projects go/snippetBox/cmd/web/middleware.go:25 +0x182
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1359ec0?, 0xc0002b4000?}, 0xffffffffffffffff?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).recoverPanic.func1({0x1359ec0?, 0xc0002b4000?}, 0x20000a820a8?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:37 +0x93
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1359ec0?, 0xc0002b4000?}, 0xc585b5?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+net/http.serverHandler.ServeHTTP({0xc00008d350?}, {0x1359ec0, 0xc0002b4000}, 0xc0000b2400)
+	C:/Program Files/Go/src/net/http/server.go:2947 +0x30c
+net/http.(*conn).serve(0xc000001540, {0x135a5f8, 0xc000205680})
+	C:/Program Files/Go/src/net/http/server.go:1991 +0x607
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3102 +0x4db
+INFO	2023/11/19 19:16:35 [::1]:51285 - HTTP/1.1 GET /
+ERROR	2023/11/19 19:16:35 handlers.go:20: no such table: snippets
+goroutine 16 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x65
+main.(*application).serverError(0xc000205140, {0x1359a70, 0xc00007ca00}, {0x1357a60?, 0xc000205860?})
+	F:/projects go/snippetBox/cmd/web/helpers.go:14 +0x58
+main.(*application).home(0xc000205140, {0x1359a70, 0xc00007ca00}, 0xc00021e2d3?)
+	F:/projects go/snippetBox/cmd/web/handlers.go:20 +0xb5
+net/http.HandlerFunc.ServeHTTP(0xc0000014a0?, {0x1359a70?, 0xc00007ca00?}, 0x0?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/alexedwards/scs/v2.(*SessionManager).LoadAndSave.func1({0x1359ec0, 0xc0001601c0}, 0xc00028c200)
+	C:/Users/mnd33/go/pkg/mod/github.com/alexedwards/scs/v2@v2.5.0/session.go:148 +0x216
+net/http.HandlerFunc.ServeHTTP(0x2?, {0x1359ec0?, 0xc0001601c0?}, 0xccae06?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/julienschmidt/httprouter.(*Router).Handler.func1({0x1359ec0?, 0xc0001601c0?}, 0xc000029470?, {0x0?, 0x0?, 0x6000000000ccad80?})
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:275 +0x196
+github.com/julienschmidt/httprouter.(*Router).ServeHTTP(0xc00007ac60, {0x1359ec0, 0xc0001601c0}, 0xc00028c200)
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:387 +0x81c
+main.secureHeaders.func1({0x1359ec0, 0xc0001601c0}, 0x4?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:18 +0x3af
+net/http.HandlerFunc.ServeHTTP(0xc00007c320?, {0x1359ec0?, 0xc0001601c0?}, 0xc0001099c8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).logRequest.func1({0x1359ec0, 0xc0001601c0}, 0xc00028c200)
+	F:/projects go/snippetBox/cmd/web/middleware.go:25 +0x182
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1359ec0?, 0xc0001601c0?}, 0xffffffffffffffff?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).recoverPanic.func1({0x1359ec0?, 0xc0001601c0?}, 0x200009aa370?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:37 +0x93
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1359ec0?, 0xc0001601c0?}, 0xc585b5?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+net/http.serverHandler.ServeHTTP({0xc00008d350?}, {0x1359ec0, 0xc0001601c0}, 0xc00028c200)
+	C:/Program Files/Go/src/net/http/server.go:2947 +0x30c
+net/http.(*conn).serve(0xc000001540, {0x135a5f8, 0xc000205680})
+	C:/Program Files/Go/src/net/http/server.go:1991 +0x607
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3102 +0x4db
+INFO	2023/11/19 19:17:30 Starting server on :4000
+INFO	2023/11/19 19:17:36 [::1]:51316 - HTTP/1.1 GET /
+ERROR	2023/11/19 19:17:36 handlers.go:20: no such table: snippets
+goroutine 40 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x65
+main.(*application).serverError(0xc000188fc0, {0x15d9a90, 0xc0002c0000}, {0x15d7a80?, 0xc0002821b0?})
+	F:/projects go/snippetBox/cmd/web/helpers.go:14 +0x58
+main.(*application).home(0xc000188fc0, {0x15d9a90, 0xc0002c0000}, 0xc0002b2033?)
+	F:/projects go/snippetBox/cmd/web/handlers.go:20 +0xb5
+net/http.HandlerFunc.ServeHTTP(0xc0001b6000?, {0x15d9a90?, 0xc0002c0000?}, 0x0?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/alexedwards/scs/v2.(*SessionManager).LoadAndSave.func1({0x15d9ee0, 0xc0002b4000}, 0xc0000b0300)
+	C:/Users/mnd33/go/pkg/mod/github.com/alexedwards/scs/v2@v2.5.0/session.go:148 +0x216
+net/http.HandlerFunc.ServeHTTP(0x2?, {0x15d9ee0?, 0xc0002b4000?}, 0x1910db8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/julienschmidt/httprouter.(*Router).Handler.func1({0x15d9ee0?, 0xc0002b4000?}, 0xc000280020?, {0x0?, 0x0?, 0xad000206215d0eb8?})
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:275 +0x196
+github.com/julienschmidt/httprouter.(*Router).ServeHTTP(0xc000184600, {0x15d9ee0, 0xc0002b4000}, 0xc0000b0300)
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:387 +0x81c
+main.secureHeaders.func1({0x15d9ee0, 0xc0002b4000}, 0x4?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:18 +0x3af
+net/http.HandlerFunc.ServeHTTP(0xc00007c320?, {0x15d9ee0?, 0xc0002b4000?}, 0xc0001099c8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).logRequest.func1({0x15d9ee0, 0xc0002b4000}, 0xc0000b0300)
+	F:/projects go/snippetBox/cmd/web/middleware.go:25 +0x182
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x15d9ee0?, 0xc0002b4000?}, 0xffffffffffffffff?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).recoverPanic.func1({0x15d9ee0?, 0xc0002b4000?}, 0x206472713b0?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:37 +0x93
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x15d9ee0?, 0xc0002b4000?}, 0xed85b5?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+net/http.serverHandler.ServeHTTP({0xc00008d920?}, {0x15d9ee0, 0xc0002b4000}, 0xc0000b0300)
+	C:/Program Files/Go/src/net/http/server.go:2947 +0x30c
+net/http.(*conn).serve(0xc0001b60a0, {0x15da618, 0xc000189500})
+	C:/Program Files/Go/src/net/http/server.go:1991 +0x607
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3102 +0x4db
+INFO	2023/11/19 19:17:39 [::1]:51316 - HTTP/1.1 GET /
+ERROR	2023/11/19 19:17:39 handlers.go:20: no such table: snippets
+goroutine 40 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x65
+main.(*application).serverError(0xc000188fc0, {0x15d9a90, 0xc0000a4140}, {0x15d7a80?, 0xc00008da40?})
+	F:/projects go/snippetBox/cmd/web/helpers.go:14 +0x58
+main.(*application).home(0xc000188fc0, {0x15d9a90, 0xc0000a4140}, 0xc0000b6333?)
+	F:/projects go/snippetBox/cmd/web/handlers.go:20 +0xb5
+net/http.HandlerFunc.ServeHTTP(0xc0001b6000?, {0x15d9a90?, 0xc0000a4140?}, 0x0?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/alexedwards/scs/v2.(*SessionManager).LoadAndSave.func1({0x15d9ee0, 0xc0000de000}, 0xc00028c200)
+	C:/Users/mnd33/go/pkg/mod/github.com/alexedwards/scs/v2@v2.5.0/session.go:148 +0x216
+net/http.HandlerFunc.ServeHTTP(0x2?, {0x15d9ee0?, 0xc0000de000?}, 0xf4ae06?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/julienschmidt/httprouter.(*Router).Handler.func1({0x15d9ee0?, 0xc0000de000?}, 0xc0000b2140?, {0x0?, 0x0?, 0xad00000000f4ad80?})
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:275 +0x196
+github.com/julienschmidt/httprouter.(*Router).ServeHTTP(0xc000184600, {0x15d9ee0, 0xc0000de000}, 0xc00028c200)
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:387 +0x81c
+main.secureHeaders.func1({0x15d9ee0, 0xc0000de000}, 0x4?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:18 +0x3af
+net/http.HandlerFunc.ServeHTTP(0xc00007c320?, {0x15d9ee0?, 0xc0000de000?}, 0xc0001099c8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).logRequest.func1({0x15d9ee0, 0xc0000de000}, 0xc00028c200)
+	F:/projects go/snippetBox/cmd/web/middleware.go:25 +0x182
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x15d9ee0?, 0xc0000de000?}, 0xffffffffffffffff?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).recoverPanic.func1({0x15d9ee0?, 0xc0000de000?}, 0x206470b0aa8?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:37 +0x93
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x15d9ee0?, 0xc0000de000?}, 0xed85b5?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+net/http.serverHandler.ServeHTTP({0xc00008d920?}, {0x15d9ee0, 0xc0000de000}, 0xc00028c200)
+	C:/Program Files/Go/src/net/http/server.go:2947 +0x30c
+net/http.(*conn).serve(0xc0001b60a0, {0x15da618, 0xc000189500})
+	C:/Program Files/Go/src/net/http/server.go:1991 +0x607
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3102 +0x4db
+INFO	2023/11/19 19:17:39 [::1]:51316 - HTTP/1.1 GET /
+ERROR	2023/11/19 19:17:39 handlers.go:20: no such table: snippets
+goroutine 40 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x65
+main.(*application).serverError(0xc000188fc0, {0x15d9a90, 0xc0000a41e0}, {0x15d7a80?, 0xc00008db60?})
+	F:/projects go/snippetBox/cmd/web/helpers.go:14 +0x58
+main.(*application).home(0xc000188fc0, {0x15d9a90, 0xc0000a41e0}, 0xc0000b6393?)
+	F:/projects go/snippetBox/cmd/web/handlers.go:20 +0xb5
+net/http.HandlerFunc.ServeHTTP(0xc0001b6000?, {0x15d9a90?, 0xc0000a41e0?}, 0x0?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/alexedwards/scs/v2.(*SessionManager).LoadAndSave.func1({0x15d9ee0, 0xc0000de0e0}, 0xc0000b0500)
+	C:/Users/mnd33/go/pkg/mod/github.com/alexedwards/scs/v2@v2.5.0/session.go:148 +0x216
+net/http.HandlerFunc.ServeHTTP(0x2?, {0x15d9ee0?, 0xc0000de0e0?}, 0xf4ae06?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/julienschmidt/httprouter.(*Router).Handler.func1({0x15d9ee0?, 0xc0000de0e0?}, 0xc0000b2270?, {0x0?, 0x0?, 0xad00000000f4ad80?})
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:275 +0x196
+github.com/julienschmidt/httprouter.(*Router).ServeHTTP(0xc000184600, {0x15d9ee0, 0xc0000de0e0}, 0xc0000b0500)
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:387 +0x81c
+main.secureHeaders.func1({0x15d9ee0, 0xc0000de0e0}, 0x4?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:18 +0x3af
+net/http.HandlerFunc.ServeHTTP(0xc00007c320?, {0x15d9ee0?, 0xc0000de0e0?}, 0xc0001099c8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).logRequest.func1({0x15d9ee0, 0xc0000de0e0}, 0xc0000b0500)
+	F:/projects go/snippetBox/cmd/web/middleware.go:25 +0x182
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x15d9ee0?, 0xc0000de0e0?}, 0xffffffffffffffff?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).recoverPanic.func1({0x15d9ee0?, 0xc0000de0e0?}, 0x206470b0aa8?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:37 +0x93
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x15d9ee0?, 0xc0000de0e0?}, 0xed85b5?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+net/http.serverHandler.ServeHTTP({0xc00008d920?}, {0x15d9ee0, 0xc0000de0e0}, 0xc0000b0500)
+	C:/Program Files/Go/src/net/http/server.go:2947 +0x30c
+net/http.(*conn).serve(0xc0001b60a0, {0x15da618, 0xc000189500})
+	C:/Program Files/Go/src/net/http/server.go:1991 +0x607
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3102 +0x4db
+INFO	2023/11/19 19:17:39 [::1]:51316 - HTTP/1.1 GET /
+ERROR	2023/11/19 19:17:39 handlers.go:20: no such table: snippets
+goroutine 40 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x65
+main.(*application).serverError(0xc000188fc0, {0x15d9a90, 0xc0001a4690}, {0x15d7a80?, 0xc000189710?})
+	F:/projects go/snippetBox/cmd/web/helpers.go:14 +0x58
+main.(*application).home(0xc000188fc0, {0x15d9a90, 0xc0001a4690}, 0xc0001ca1b3?)
+	F:/projects go/snippetBox/cmd/web/handlers.go:20 +0xb5
+net/http.HandlerFunc.ServeHTTP(0xc0001b6000?, {0x15d9a90?, 0xc0001a4690?}, 0x0?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/alexedwards/scs/v2.(*SessionManager).LoadAndSave.func1({0x15d9ee0, 0xc0001e0000}, 0xc0001a2300)
+	C:/Users/mnd33/go/pkg/mod/github.com/alexedwards/scs/v2@v2.5.0/session.go:148 +0x216
+net/http.HandlerFunc.ServeHTTP(0x2?, {0x15d9ee0?, 0xc0001e0000?}, 0xf4ae06?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/julienschmidt/httprouter.(*Router).Handler.func1({0x15d9ee0?, 0xc0001e0000?}, 0xc00018e530?, {0x0?, 0x0?, 0xad00000000f4ad80?})
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:275 +0x196
+github.com/julienschmidt/httprouter.(*Router).ServeHTTP(0xc000184600, {0x15d9ee0, 0xc0001e0000}, 0xc0001a2300)
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:387 +0x81c
+main.secureHeaders.func1({0x15d9ee0, 0xc0001e0000}, 0x4?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:18 +0x3af
+net/http.HandlerFunc.ServeHTTP(0xc00007c320?, {0x15d9ee0?, 0xc0001e0000?}, 0xc0001099c8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).logRequest.func1({0x15d9ee0, 0xc0001e0000}, 0xc0001a2300)
+	F:/projects go/snippetBox/cmd/web/middleware.go:25 +0x182
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x15d9ee0?, 0xc0001e0000?}, 0xffffffffffffffff?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).recoverPanic.func1({0x15d9ee0?, 0xc0001e0000?}, 0x206470b30e8?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:37 +0x93
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x15d9ee0?, 0xc0001e0000?}, 0xed85b5?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+net/http.serverHandler.ServeHTTP({0xc00008d920?}, {0x15d9ee0, 0xc0001e0000}, 0xc0001a2300)
+	C:/Program Files/Go/src/net/http/server.go:2947 +0x30c
+net/http.(*conn).serve(0xc0001b60a0, {0x15da618, 0xc000189500})
+	C:/Program Files/Go/src/net/http/server.go:1991 +0x607
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3102 +0x4db
+INFO	2023/11/19 19:17:39 [::1]:51316 - HTTP/1.1 GET /
+ERROR	2023/11/19 19:17:39 handlers.go:20: no such table: snippets
+goroutine 40 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x65
+main.(*application).serverError(0xc000188fc0, {0x15d9a90, 0xc0001a46e0}, {0x15d7a80?, 0xc000189860?})
+	F:/projects go/snippetBox/cmd/web/helpers.go:14 +0x58
+main.(*application).home(0xc000188fc0, {0x15d9a90, 0xc0001a46e0}, 0xc0001ca213?)
+	F:/projects go/snippetBox/cmd/web/handlers.go:20 +0xb5
+net/http.HandlerFunc.ServeHTTP(0xc0001b6000?, {0x15d9a90?, 0xc0001a46e0?}, 0x0?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/alexedwards/scs/v2.(*SessionManager).LoadAndSave.func1({0x15d9ee0, 0xc0001e00e0}, 0xc0000b0700)
+	C:/Users/mnd33/go/pkg/mod/github.com/alexedwards/scs/v2@v2.5.0/session.go:148 +0x216
+net/http.HandlerFunc.ServeHTTP(0x2?, {0x15d9ee0?, 0xc0001e00e0?}, 0xf4ae06?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/julienschmidt/httprouter.(*Router).Handler.func1({0x15d9ee0?, 0xc0001e00e0?}, 0xc00018e640?, {0x0?, 0x0?, 0xad00000000f4ad80?})
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:275 +0x196
+github.com/julienschmidt/httprouter.(*Router).ServeHTTP(0xc000184600, {0x15d9ee0, 0xc0001e00e0}, 0xc0000b0700)
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:387 +0x81c
+main.secureHeaders.func1({0x15d9ee0, 0xc0001e00e0}, 0x4?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:18 +0x3af
+net/http.HandlerFunc.ServeHTTP(0xc00007c320?, {0x15d9ee0?, 0xc0001e00e0?}, 0xc0001099c8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).logRequest.func1({0x15d9ee0, 0xc0001e00e0}, 0xc0000b0700)
+	F:/projects go/snippetBox/cmd/web/middleware.go:25 +0x182
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x15d9ee0?, 0xc0001e00e0?}, 0xffffffffffffffff?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).recoverPanic.func1({0x15d9ee0?, 0xc0001e00e0?}, 0x206470b30e8?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:37 +0x93
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x15d9ee0?, 0xc0001e00e0?}, 0xed85b5?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+net/http.serverHandler.ServeHTTP({0xc00008d920?}, {0x15d9ee0, 0xc0001e00e0}, 0xc0000b0700)
+	C:/Program Files/Go/src/net/http/server.go:2947 +0x30c
+net/http.(*conn).serve(0xc0001b60a0, {0x15da618, 0xc000189500})
+	C:/Program Files/Go/src/net/http/server.go:1991 +0x607
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3102 +0x4db
+INFO	2023/11/19 19:19:14 [::1]:51316 - HTTP/1.1 GET /
+ERROR	2023/11/19 19:19:14 handlers.go:20: no such table: snippets
+goroutine 40 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x65
+main.(*application).serverError(0xc000188fc0, {0x15d9a90, 0xc0001a4730}, {0x15d7a80?, 0xc0001899e0?})
+	F:/projects go/snippetBox/cmd/web/helpers.go:14 +0x58
+main.(*application).home(0xc000188fc0, {0x15d9a90, 0xc0001a4730}, 0xc0001ca273?)
+	F:/projects go/snippetBox/cmd/web/handlers.go:20 +0xb5
+net/http.HandlerFunc.ServeHTTP(0xc0001b6000?, {0x15d9a90?, 0xc0001a4730?}, 0x0?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/alexedwards/scs/v2.(*SessionManager).LoadAndSave.func1({0x15d9ee0, 0xc0001e01c0}, 0xc00028c300)
+	C:/Users/mnd33/go/pkg/mod/github.com/alexedwards/scs/v2@v2.5.0/session.go:148 +0x216
+net/http.HandlerFunc.ServeHTTP(0x2?, {0x15d9ee0?, 0xc0001e01c0?}, 0xf4ae06?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/julienschmidt/httprouter.(*Router).Handler.func1({0x15d9ee0?, 0xc0001e01c0?}, 0xc00018e770?, {0x0?, 0x0?, 0xad00000000f4ad80?})
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:275 +0x196
+github.com/julienschmidt/httprouter.(*Router).ServeHTTP(0xc000184600, {0x15d9ee0, 0xc0001e01c0}, 0xc00028c300)
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:387 +0x81c
+main.secureHeaders.func1({0x15d9ee0, 0xc0001e01c0}, 0x4?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:18 +0x3af
+net/http.HandlerFunc.ServeHTTP(0xc00007c320?, {0x15d9ee0?, 0xc0001e01c0?}, 0xc0001099c8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).logRequest.func1({0x15d9ee0, 0xc0001e01c0}, 0xc00028c300)
+	F:/projects go/snippetBox/cmd/web/middleware.go:25 +0x182
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x15d9ee0?, 0xc0001e01c0?}, 0xffffffffffffffff?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).recoverPanic.func1({0x15d9ee0?, 0xc0001e01c0?}, 0x206470b30e8?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:37 +0x93
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x15d9ee0?, 0xc0001e01c0?}, 0xed85b5?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+net/http.serverHandler.ServeHTTP({0xc00008d920?}, {0x15d9ee0, 0xc0001e01c0}, 0xc00028c300)
+	C:/Program Files/Go/src/net/http/server.go:2947 +0x30c
+net/http.(*conn).serve(0xc0001b60a0, {0x15da618, 0xc000189500})
+	C:/Program Files/Go/src/net/http/server.go:1991 +0x607
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3102 +0x4db
+INFO	2023/11/19 19:19:15 [::1]:51316 - HTTP/1.1 GET /
+ERROR	2023/11/19 19:19:15 handlers.go:20: no such table: snippets
+goroutine 40 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x65
+main.(*application).serverError(0xc000188fc0, {0x15d9a90, 0xc0001a47d0}, {0x15d7a80?, 0xc000189b00?})
+	F:/projects go/snippetBox/cmd/web/helpers.go:14 +0x58
+main.(*application).home(0xc000188fc0, {0x15d9a90, 0xc0001a47d0}, 0xc0001ca2d3?)
+	F:/projects go/snippetBox/cmd/web/handlers.go:20 +0xb5
+net/http.HandlerFunc.ServeHTTP(0xc0001b6000?, {0x15d9a90?, 0xc0001a47d0?}, 0x0?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/alexedwards/scs/v2.(*SessionManager).LoadAndSave.func1({0x15d9ee0, 0xc0001e02a0}, 0xc0001a2800)
+	C:/Users/mnd33/go/pkg/mod/github.com/alexedwards/scs/v2@v2.5.0/session.go:148 +0x216
+net/http.HandlerFunc.ServeHTTP(0x2?, {0x15d9ee0?, 0xc0001e02a0?}, 0xf4ae06?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/julienschmidt/httprouter.(*Router).Handler.func1({0x15d9ee0?, 0xc0001e02a0?}, 0xc00018e890?, {0x0?, 0x0?, 0xad00000000f4ad80?})
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:275 +0x196
+github.com/julienschmidt/httprouter.(*Router).ServeHTTP(0xc000184600, {0x15d9ee0, 0xc0001e02a0}, 0xc0001a2800)
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:387 +0x81c
+main.secureHeaders.func1({0x15d9ee0, 0xc0001e02a0}, 0x4?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:18 +0x3af
+net/http.HandlerFunc.ServeHTTP(0xc00007c320?, {0x15d9ee0?, 0xc0001e02a0?}, 0xc0001099c8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).logRequest.func1({0x15d9ee0, 0xc0001e02a0}, 0xc0001a2800)
+	F:/projects go/snippetBox/cmd/web/middleware.go:25 +0x182
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x15d9ee0?, 0xc0001e02a0?}, 0xffffffffffffffff?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).recoverPanic.func1({0x15d9ee0?, 0xc0001e02a0?}, 0x206470b30e8?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:37 +0x93
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x15d9ee0?, 0xc0001e02a0?}, 0xed85b5?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+net/http.serverHandler.ServeHTTP({0xc00008d920?}, {0x15d9ee0, 0xc0001e02a0}, 0xc0001a2800)
+	C:/Program Files/Go/src/net/http/server.go:2947 +0x30c
+net/http.(*conn).serve(0xc0001b60a0, {0x15da618, 0xc000189500})
+	C:/Program Files/Go/src/net/http/server.go:1991 +0x607
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3102 +0x4db
+INFO	2023/11/19 19:19:15 [::1]:51316 - HTTP/1.1 GET /
+ERROR	2023/11/19 19:19:15 handlers.go:20: no such table: snippets
+goroutine 40 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x65
+main.(*application).serverError(0xc000188fc0, {0x15d9a90, 0xc0000a42d0}, {0x15d7a80?, 0xc00008dcb0?})
+	F:/projects go/snippetBox/cmd/web/helpers.go:14 +0x58
+main.(*application).home(0xc000188fc0, {0x15d9a90, 0xc0000a42d0}, 0xc0000b63f3?)
+	F:/projects go/snippetBox/cmd/web/handlers.go:20 +0xb5
+net/http.HandlerFunc.ServeHTTP(0xc0001b6000?, {0x15d9a90?, 0xc0000a42d0?}, 0x0?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/alexedwards/scs/v2.(*SessionManager).LoadAndSave.func1({0x15d9ee0, 0xc0000de1c0}, 0xc0000b0800)
+	C:/Users/mnd33/go/pkg/mod/github.com/alexedwards/scs/v2@v2.5.0/session.go:148 +0x216
+net/http.HandlerFunc.ServeHTTP(0x2?, {0x15d9ee0?, 0xc0000de1c0?}, 0xf4ae06?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/julienschmidt/httprouter.(*Router).Handler.func1({0x15d9ee0?, 0xc0000de1c0?}, 0xc0000b2390?, {0x0?, 0x0?, 0xad00000000f4ad80?})
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:275 +0x196
+github.com/julienschmidt/httprouter.(*Router).ServeHTTP(0xc000184600, {0x15d9ee0, 0xc0000de1c0}, 0xc0000b0800)
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:387 +0x81c
+main.secureHeaders.func1({0x15d9ee0, 0xc0000de1c0}, 0x4?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:18 +0x3af
+net/http.HandlerFunc.ServeHTTP(0xc00007c320?, {0x15d9ee0?, 0xc0000de1c0?}, 0xc0001099c8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).logRequest.func1({0x15d9ee0, 0xc0000de1c0}, 0xc0000b0800)
+	F:/projects go/snippetBox/cmd/web/middleware.go:25 +0x182
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x15d9ee0?, 0xc0000de1c0?}, 0xffffffffffffffff?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).recoverPanic.func1({0x15d9ee0?, 0xc0000de1c0?}, 0x206470b0aa8?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:37 +0x93
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x15d9ee0?, 0xc0000de1c0?}, 0xed85b5?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+net/http.serverHandler.ServeHTTP({0xc00008d920?}, {0x15d9ee0, 0xc0000de1c0}, 0xc0000b0800)
+	C:/Program Files/Go/src/net/http/server.go:2947 +0x30c
+net/http.(*conn).serve(0xc0001b60a0, {0x15da618, 0xc000189500})
+	C:/Program Files/Go/src/net/http/server.go:1991 +0x607
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3102 +0x4db
+INFO	2023/11/19 19:19:15 [::1]:51316 - HTTP/1.1 GET /
+ERROR	2023/11/19 19:19:15 handlers.go:20: no such table: snippets
+goroutine 40 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x65
+main.(*application).serverError(0xc000188fc0, {0x15d9a90, 0xc0002c00f0}, {0x15d7a80?, 0xc000282330?})
+	F:/projects go/snippetBox/cmd/web/helpers.go:14 +0x58
+main.(*application).home(0xc000188fc0, {0x15d9a90, 0xc0002c00f0}, 0xc0002b20f3?)
+	F:/projects go/snippetBox/cmd/web/handlers.go:20 +0xb5
+net/http.HandlerFunc.ServeHTTP(0xc0001b6000?, {0x15d9a90?, 0xc0002c00f0?}, 0x0?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/alexedwards/scs/v2.(*SessionManager).LoadAndSave.func1({0x15d9ee0, 0xc0002b40e0}, 0xc0000b0a00)
+	C:/Users/mnd33/go/pkg/mod/github.com/alexedwards/scs/v2@v2.5.0/session.go:148 +0x216
+net/http.HandlerFunc.ServeHTTP(0x2?, {0x15d9ee0?, 0xc0002b40e0?}, 0xf4ae06?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/julienschmidt/httprouter.(*Router).Handler.func1({0x15d9ee0?, 0xc0002b40e0?}, 0xc000280180?, {0x0?, 0x0?, 0xad00000000f4ad80?})
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:275 +0x196
+github.com/julienschmidt/httprouter.(*Router).ServeHTTP(0xc000184600, {0x15d9ee0, 0xc0002b40e0}, 0xc0000b0a00)
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:387 +0x81c
+main.secureHeaders.func1({0x15d9ee0, 0xc0002b40e0}, 0x4?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:18 +0x3af
+net/http.HandlerFunc.ServeHTTP(0xc00007c320?, {0x15d9ee0?, 0xc0002b40e0?}, 0xc0001099c8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).logRequest.func1({0x15d9ee0, 0xc0002b40e0}, 0xc0000b0a00)
+	F:/projects go/snippetBox/cmd/web/middleware.go:25 +0x182
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x15d9ee0?, 0xc0002b40e0?}, 0xffffffffffffffff?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).recoverPanic.func1({0x15d9ee0?, 0xc0002b40e0?}, 0x206472713b0?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:37 +0x93
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x15d9ee0?, 0xc0002b40e0?}, 0xed85b5?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+net/http.serverHandler.ServeHTTP({0xc00008d920?}, {0x15d9ee0, 0xc0002b40e0}, 0xc0000b0a00)
+	C:/Program Files/Go/src/net/http/server.go:2947 +0x30c
+net/http.(*conn).serve(0xc0001b60a0, {0x15da618, 0xc000189500})
+	C:/Program Files/Go/src/net/http/server.go:1991 +0x607
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3102 +0x4db
+INFO	2023/11/19 19:19:15 [::1]:51316 - HTTP/1.1 GET /
+ERROR	2023/11/19 19:19:15 handlers.go:20: no such table: snippets
+goroutine 40 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x65
+main.(*application).serverError(0xc000188fc0, {0x15d9a90, 0xc0002c0190}, {0x15d7a80?, 0xc000282450?})
+	F:/projects go/snippetBox/cmd/web/helpers.go:14 +0x58
+main.(*application).home(0xc000188fc0, {0x15d9a90, 0xc0002c0190}, 0xc0002b2153?)
+	F:/projects go/snippetBox/cmd/web/handlers.go:20 +0xb5
+net/http.HandlerFunc.ServeHTTP(0xc0001b6000?, {0x15d9a90?, 0xc0002c0190?}, 0x0?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/alexedwards/scs/v2.(*SessionManager).LoadAndSave.func1({0x15d9ee0, 0xc0002b41c0}, 0xc00028c500)
+	C:/Users/mnd33/go/pkg/mod/github.com/alexedwards/scs/v2@v2.5.0/session.go:148 +0x216
+net/http.HandlerFunc.ServeHTTP(0x2?, {0x15d9ee0?, 0xc0002b41c0?}, 0xf4ae06?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/julienschmidt/httprouter.(*Router).Handler.func1({0x15d9ee0?, 0xc0002b41c0?}, 0xc0002802a0?, {0x0?, 0x0?, 0xad00000000f4ad80?})
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:275 +0x196
+github.com/julienschmidt/httprouter.(*Router).ServeHTTP(0xc000184600, {0x15d9ee0, 0xc0002b41c0}, 0xc00028c500)
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:387 +0x81c
+main.secureHeaders.func1({0x15d9ee0, 0xc0002b41c0}, 0x4?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:18 +0x3af
+net/http.HandlerFunc.ServeHTTP(0xc00007c320?, {0x15d9ee0?, 0xc0002b41c0?}, 0xc0001099c8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).logRequest.func1({0x15d9ee0, 0xc0002b41c0}, 0xc00028c500)
+	F:/projects go/snippetBox/cmd/web/middleware.go:25 +0x182
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x15d9ee0?, 0xc0002b41c0?}, 0xffffffffffffffff?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).recoverPanic.func1({0x15d9ee0?, 0xc0002b41c0?}, 0x206472713b0?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:37 +0x93
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x15d9ee0?, 0xc0002b41c0?}, 0xed85b5?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+net/http.serverHandler.ServeHTTP({0xc00008d920?}, {0x15d9ee0, 0xc0002b41c0}, 0xc00028c500)
+	C:/Program Files/Go/src/net/http/server.go:2947 +0x30c
+net/http.(*conn).serve(0xc0001b60a0, {0x15da618, 0xc000189500})
+	C:/Program Files/Go/src/net/http/server.go:1991 +0x607
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3102 +0x4db
+INFO	2023/11/19 19:19:15 [::1]:51316 - HTTP/1.1 GET /
+ERROR	2023/11/19 19:19:15 handlers.go:20: no such table: snippets
+goroutine 40 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x65
+main.(*application).serverError(0xc000188fc0, {0x15d9a90, 0xc0002c01e0}, {0x15d7a80?, 0xc0002825a0?})
+	F:/projects go/snippetBox/cmd/web/helpers.go:14 +0x58
+main.(*application).home(0xc000188fc0, {0x15d9a90, 0xc0002c01e0}, 0xc0002b21b3?)
+	F:/projects go/snippetBox/cmd/web/handlers.go:20 +0xb5
+net/http.HandlerFunc.ServeHTTP(0xc0001b6000?, {0x15d9a90?, 0xc0002c01e0?}, 0x0?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/alexedwards/scs/v2.(*SessionManager).LoadAndSave.func1({0x15d9ee0, 0xc0002b42a0}, 0xc0000b0b00)
+	C:/Users/mnd33/go/pkg/mod/github.com/alexedwards/scs/v2@v2.5.0/session.go:148 +0x216
+net/http.HandlerFunc.ServeHTTP(0x2?, {0x15d9ee0?, 0xc0002b42a0?}, 0xf4ae06?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/julienschmidt/httprouter.(*Router).Handler.func1({0x15d9ee0?, 0xc0002b42a0?}, 0xc0002803b0?, {0x0?, 0x0?, 0xad00000000f4ad80?})
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:275 +0x196
+github.com/julienschmidt/httprouter.(*Router).ServeHTTP(0xc000184600, {0x15d9ee0, 0xc0002b42a0}, 0xc0000b0b00)
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:387 +0x81c
+main.secureHeaders.func1({0x15d9ee0, 0xc0002b42a0}, 0x4?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:18 +0x3af
+net/http.HandlerFunc.ServeHTTP(0xc00007c320?, {0x15d9ee0?, 0xc0002b42a0?}, 0xc0001099c8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).logRequest.func1({0x15d9ee0, 0xc0002b42a0}, 0xc0000b0b00)
+	F:/projects go/snippetBox/cmd/web/middleware.go:25 +0x182
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x15d9ee0?, 0xc0002b42a0?}, 0xffffffffffffffff?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).recoverPanic.func1({0x15d9ee0?, 0xc0002b42a0?}, 0x206472713b0?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:37 +0x93
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x15d9ee0?, 0xc0002b42a0?}, 0xed85b5?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+net/http.serverHandler.ServeHTTP({0xc00008d920?}, {0x15d9ee0, 0xc0002b42a0}, 0xc0000b0b00)
+	C:/Program Files/Go/src/net/http/server.go:2947 +0x30c
+net/http.(*conn).serve(0xc0001b60a0, {0x15da618, 0xc000189500})
+	C:/Program Files/Go/src/net/http/server.go:1991 +0x607
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3102 +0x4db
+INFO	2023/11/19 19:19:16 [::1]:51316 - HTTP/1.1 GET /
+ERROR	2023/11/19 19:19:16 handlers.go:20: no such table: snippets
+goroutine 40 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x65
+main.(*application).serverError(0xc000188fc0, {0x15d9a90, 0xc0001a4820}, {0x15d7a80?, 0xc000189c20?})
+	F:/projects go/snippetBox/cmd/web/helpers.go:14 +0x58
+main.(*application).home(0xc000188fc0, {0x15d9a90, 0xc0001a4820}, 0xc0001ca333?)
+	F:/projects go/snippetBox/cmd/web/handlers.go:20 +0xb5
+net/http.HandlerFunc.ServeHTTP(0xc0001b6000?, {0x15d9a90?, 0xc0001a4820?}, 0x0?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/alexedwards/scs/v2.(*SessionManager).LoadAndSave.func1({0x15d9ee0, 0xc0001e0380}, 0xc00028c800)
+	C:/Users/mnd33/go/pkg/mod/github.com/alexedwards/scs/v2@v2.5.0/session.go:148 +0x216
+net/http.HandlerFunc.ServeHTTP(0x2?, {0x15d9ee0?, 0xc0001e0380?}, 0xf4ae06?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/julienschmidt/httprouter.(*Router).Handler.func1({0x15d9ee0?, 0xc0001e0380?}, 0xc00018e9a0?, {0x0?, 0x0?, 0xad00000000f4ad80?})
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:275 +0x196
+github.com/julienschmidt/httprouter.(*Router).ServeHTTP(0xc000184600, {0x15d9ee0, 0xc0001e0380}, 0xc00028c800)
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:387 +0x81c
+main.secureHeaders.func1({0x15d9ee0, 0xc0001e0380}, 0x4?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:18 +0x3af
+net/http.HandlerFunc.ServeHTTP(0xc00007c320?, {0x15d9ee0?, 0xc0001e0380?}, 0xc0001099c8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).logRequest.func1({0x15d9ee0, 0xc0001e0380}, 0xc00028c800)
+	F:/projects go/snippetBox/cmd/web/middleware.go:25 +0x182
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x15d9ee0?, 0xc0001e0380?}, 0xffffffffffffffff?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).recoverPanic.func1({0x15d9ee0?, 0xc0001e0380?}, 0x206470b30e8?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:37 +0x93
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x15d9ee0?, 0xc0001e0380?}, 0xed85b5?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+net/http.serverHandler.ServeHTTP({0xc00008d920?}, {0x15d9ee0, 0xc0001e0380}, 0xc00028c800)
+	C:/Program Files/Go/src/net/http/server.go:2947 +0x30c
+net/http.(*conn).serve(0xc0001b60a0, {0x15da618, 0xc000189500})
+	C:/Program Files/Go/src/net/http/server.go:1991 +0x607
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3102 +0x4db
+INFO	2023/11/19 19:19:48 Starting server on :4000
+INFO	2023/11/19 19:19:53 [::1]:60219 - HTTP/1.1 GET /
+ERROR	2023/11/19 19:19:53 handlers.go:20: no such table: snippets
+goroutine 42 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x65
+main.(*application).serverError(0xc000189440, {0xbd9970, 0xc0000a40f0}, {0xbd7960?, 0xc00008c660?})
+	F:/projects go/snippetBox/cmd/web/helpers.go:14 +0x58
+main.(*application).home(0xc000189440, {0xbd9970, 0xc0000a40f0}, 0xc0000bc093?)
+	F:/projects go/snippetBox/cmd/web/handlers.go:20 +0xb5
+net/http.HandlerFunc.ServeHTTP(0xc0001a60a0?, {0xbd9970?, 0xc0000a40f0?}, 0x0?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/alexedwards/scs/v2.(*SessionManager).LoadAndSave.func1({0xbd9dc0, 0xc0000d0000}, 0xc0000b0200)
+	C:/Users/mnd33/go/pkg/mod/github.com/alexedwards/scs/v2@v2.5.0/session.go:148 +0x216
+net/http.HandlerFunc.ServeHTTP(0x2?, {0xbd9dc0?, 0xc0000d0000?}, 0xf10db8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/julienschmidt/httprouter.(*Router).Handler.func1({0xbd9dc0?, 0xc0000d0000?}, 0xc0000b2040?, {0x0?, 0x0?, 0xe30001a7c5cc0598?})
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:275 +0x196
+github.com/julienschmidt/httprouter.(*Router).ServeHTTP(0xc000184720, {0xbd9dc0, 0xc0000d0000}, 0xc0000b0200)
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:387 +0x81c
+main.secureHeaders.func1({0xbd9dc0, 0xc0000d0000}, 0x4?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:18 +0x3af
+net/http.HandlerFunc.ServeHTTP(0xc000192000?, {0xbd9dc0?, 0xc0000d0000?}, 0xc0001099c8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).logRequest.func1({0xbd9dc0, 0xc0000d0000}, 0xc0000b0200)
+	F:/projects go/snippetBox/cmd/web/middleware.go:25 +0x182
+net/http.HandlerFunc.ServeHTTP(0x0?, {0xbd9dc0?, 0xc0000d0000?}, 0xffffffffffffffff?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).recoverPanic.func1({0xbd9dc0?, 0xc0000d0000?}, 0x1a7eb790aa8?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:37 +0x93
+net/http.HandlerFunc.ServeHTTP(0x0?, {0xbd9dc0?, 0xc0000d0000?}, 0x4d85b5?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+net/http.serverHandler.ServeHTTP({0xc00008c4e0?}, {0xbd9dc0, 0xc0000d0000}, 0xc0000b0200)
+	C:/Program Files/Go/src/net/http/server.go:2947 +0x30c
+net/http.(*conn).serve(0xc0001a6140, {0xbda4f8, 0xc000189980})
+	C:/Program Files/Go/src/net/http/server.go:1991 +0x607
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3102 +0x4db
+INFO	2023/11/19 19:21:04 Starting server on :4000
+INFO	2023/11/19 19:21:09 [::1]:60869 - HTTP/1.1 GET /
+ERROR	2023/11/19 19:21:09 handlers.go:20: no such table: snippets
+goroutine 45 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x65
+main.(*application).serverError(0xc0001de870, {0x869970, 0xc0001a8690}, {0x867960?, 0xc0001deff0?})
+	F:/projects go/snippetBox/cmd/web/helpers.go:14 +0x58
+main.(*application).home(0xc0001de870, {0x869970, 0xc0001a8690}, 0xc0001f63f3?)
+	F:/projects go/snippetBox/cmd/web/handlers.go:20 +0xb5
+net/http.HandlerFunc.ServeHTTP(0xc0001e0000?, {0x869970?, 0xc0001a8690?}, 0x0?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/alexedwards/scs/v2.(*SessionManager).LoadAndSave.func1({0x869dc0, 0xc000288000}, 0xc0000cc000)
+	C:/Users/mnd33/go/pkg/mod/github.com/alexedwards/scs/v2@v2.5.0/session.go:148 +0x216
+net/http.HandlerFunc.ServeHTTP(0x2?, {0x869dc0?, 0xc000288000?}, 0x1dae06?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/julienschmidt/httprouter.(*Router).Handler.func1({0x869dc0?, 0xc000288000?}, 0xc0001a2690?, {0x0?, 0x0?, 0x95000000001dad80?})
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:275 +0x196
+github.com/julienschmidt/httprouter.(*Router).ServeHTTP(0xc0001a1260, {0x869dc0, 0xc000288000}, 0xc0000cc000)
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:387 +0x81c
+main.secureHeaders.func1({0x869dc0, 0xc000288000}, 0x4?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:18 +0x3af
+net/http.HandlerFunc.ServeHTTP(0xc00007c320?, {0x869dc0?, 0xc000288000?}, 0xc0001099c8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).logRequest.func1({0x869dc0, 0xc000288000}, 0xc0000cc000)
+	F:/projects go/snippetBox/cmd/web/middleware.go:25 +0x182
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x869dc0?, 0xc000288000?}, 0xffffffffffffffff?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).recoverPanic.func1({0x869dc0?, 0xc000288000?}, 0x1ed3f002d30?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:37 +0x93
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x869dc0?, 0xc000288000?}, 0x1685b5?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+net/http.serverHandler.ServeHTTP({0xc00008c9f0?}, {0x869dc0, 0xc000288000}, 0xc0000cc000)
+	C:/Program Files/Go/src/net/http/server.go:2947 +0x30c
+net/http.(*conn).serve(0xc0001e00a0, {0x86a4f8, 0xc0001dedb0})
+	C:/Program Files/Go/src/net/http/server.go:1991 +0x607
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3102 +0x4db
+INFO	2023/11/19 19:21:10 [::1]:60869 - HTTP/1.1 GET /
+ERROR	2023/11/19 19:21:10 handlers.go:20: no such table: snippets
+goroutine 45 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x65
+main.(*application).serverError(0xc0001de870, {0x869970, 0xc0000a40f0}, {0x867960?, 0xc00008cb10?})
+	F:/projects go/snippetBox/cmd/web/helpers.go:14 +0x58
+main.(*application).home(0xc0001de870, {0x869970, 0xc0000a40f0}, 0xc0000a8273?)
+	F:/projects go/snippetBox/cmd/web/handlers.go:20 +0xb5
+net/http.HandlerFunc.ServeHTTP(0xc0001e0000?, {0x869970?, 0xc0000a40f0?}, 0x0?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/alexedwards/scs/v2.(*SessionManager).LoadAndSave.func1({0x869dc0, 0xc0000d2000}, 0xc00019aa00)
+	C:/Users/mnd33/go/pkg/mod/github.com/alexedwards/scs/v2@v2.5.0/session.go:148 +0x216
+net/http.HandlerFunc.ServeHTTP(0x2?, {0x869dc0?, 0xc0000d2000?}, 0x1dae06?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/julienschmidt/httprouter.(*Router).Handler.func1({0x869dc0?, 0xc0000d2000?}, 0xc0000aa070?, {0x0?, 0x0?, 0x95000000001dad80?})
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:275 +0x196
+github.com/julienschmidt/httprouter.(*Router).ServeHTTP(0xc0001a1260, {0x869dc0, 0xc0000d2000}, 0xc00019aa00)
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:387 +0x81c
+main.secureHeaders.func1({0x869dc0, 0xc0000d2000}, 0x4?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:18 +0x3af
+net/http.HandlerFunc.ServeHTTP(0xc00007c320?, {0x869dc0?, 0xc0000d2000?}, 0xc0001099c8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).logRequest.func1({0x869dc0, 0xc0000d2000}, 0xc00019aa00)
+	F:/projects go/snippetBox/cmd/web/middleware.go:25 +0x182
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x869dc0?, 0xc0000d2000?}, 0xffffffffffffffff?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).recoverPanic.func1({0x869dc0?, 0xc0000d2000?}, 0x1ed3f000aa8?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:37 +0x93
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x869dc0?, 0xc0000d2000?}, 0x1685b5?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+net/http.serverHandler.ServeHTTP({0xc00008c9f0?}, {0x869dc0, 0xc0000d2000}, 0xc00019aa00)
+	C:/Program Files/Go/src/net/http/server.go:2947 +0x30c
+net/http.(*conn).serve(0xc0001e00a0, {0x86a4f8, 0xc0001dedb0})
+	C:/Program Files/Go/src/net/http/server.go:1991 +0x607
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3102 +0x4db
+INFO	2023/11/19 19:23:16 Starting server on :4000
+INFO	2023/11/19 19:23:25 [::1]:60934 - HTTP/1.1 GET /
+ERROR	2023/11/19 19:23:25 handlers.go:20: no such table: snippets
+goroutine 15 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x65
+main.(*application).serverError(0xc000188c60, {0x1319970, 0xc0000a40f0}, {0x1317960?, 0xc00008daa0?})
+	F:/projects go/snippetBox/cmd/web/helpers.go:14 +0x58
+main.(*application).home(0xc000188c60, {0x1319970, 0xc0000a40f0}, 0xc0000a64b3?)
+	F:/projects go/snippetBox/cmd/web/handlers.go:20 +0xb5
+net/http.HandlerFunc.ServeHTTP(0xc0000014a0?, {0x1319970?, 0xc0000a40f0?}, 0x0?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/alexedwards/scs/v2.(*SessionManager).LoadAndSave.func1({0x1319dc0, 0xc0000d2000}, 0xc000290000)
+	C:/Users/mnd33/go/pkg/mod/github.com/alexedwards/scs/v2@v2.5.0/session.go:148 +0x216
+net/http.HandlerFunc.ServeHTTP(0x2?, {0x1319dc0?, 0xc0000d2000?}, 0xc8ae06?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/julienschmidt/httprouter.(*Router).Handler.func1({0x1319dc0?, 0xc0000d2000?}, 0xc0000a8110?, {0x0?, 0x0?, 0x800000000c8ad80?})
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:275 +0x196
+github.com/julienschmidt/httprouter.(*Router).ServeHTTP(0xc00007aa80, {0x1319dc0, 0xc0000d2000}, 0xc000290000)
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:387 +0x81c
+main.secureHeaders.func1({0x1319dc0, 0xc0000d2000}, 0x4?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:18 +0x3af
+net/http.HandlerFunc.ServeHTTP(0xc00007c320?, {0x1319dc0?, 0xc0000d2000?}, 0xc0001099c8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).logRequest.func1({0x1319dc0, 0xc0000d2000}, 0xc000290000)
+	F:/projects go/snippetBox/cmd/web/middleware.go:25 +0x182
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1319dc0?, 0xc0000d2000?}, 0xffffffffffffffff?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).recoverPanic.func1({0x1319dc0?, 0xc0000d2000?}, 0x25e74030aa8?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:37 +0x93
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x1319dc0?, 0xc0000d2000?}, 0xc185b5?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+net/http.serverHandler.ServeHTTP({0xc000282030?}, {0x1319dc0, 0xc0000d2000}, 0xc000290000)
+	C:/Program Files/Go/src/net/http/server.go:2947 +0x30c
+net/http.(*conn).serve(0xc000001540, {0x131a4f8, 0xc0001891a0})
+	C:/Program Files/Go/src/net/http/server.go:1991 +0x607
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3102 +0x4db
+INFO	2023/11/19 19:25:29 Starting server on :4000
+INFO	2023/11/19 19:25:37 [::1]:64982 - HTTP/1.1 GET /
+ERROR	2023/11/19 19:25:37 handlers.go:20: no such table: snippets
+goroutine 13 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x65
+main.(*application).serverError(0xc0002084b0, {0x14f9970, 0xc0000a4190}, {0x14f7960?, 0xc00008d830?})
+	F:/projects go/snippetBox/cmd/web/helpers.go:14 +0x58
+main.(*application).home(0xc0002084b0, {0x14f9970, 0xc0000a4190}, 0xc0000aa453?)
+	F:/projects go/snippetBox/cmd/web/handlers.go:20 +0xb5
+net/http.HandlerFunc.ServeHTTP(0xc000001540?, {0x14f9970?, 0xc0000a4190?}, 0x0?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/alexedwards/scs/v2.(*SessionManager).LoadAndSave.func1({0x14f9dc0, 0xc0000e6000}, 0xc0000bc200)
+	C:/Users/mnd33/go/pkg/mod/github.com/alexedwards/scs/v2@v2.5.0/session.go:148 +0x216
+net/http.HandlerFunc.ServeHTTP(0x2?, {0x14f9dc0?, 0xc0000e6000?}, 0xe6ae06?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/julienschmidt/httprouter.(*Router).Handler.func1({0x14f9dc0?, 0xc0000e6000?}, 0xc0000a61f0?, {0x0?, 0x0?, 0xb900000000e6ad80?})
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:275 +0x196
+github.com/julienschmidt/httprouter.(*Router).ServeHTTP(0xc00007c840, {0x14f9dc0, 0xc0000e6000}, 0xc0000bc200)
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:387 +0x81c
+main.secureHeaders.func1({0x14f9dc0, 0xc0000e6000}, 0x4?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:18 +0x3af
+net/http.HandlerFunc.ServeHTTP(0xc0000a4050?, {0x14f9dc0?, 0xc0000e6000?}, 0xc00010b9c8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).logRequest.func1({0x14f9dc0, 0xc0000e6000}, 0xc0000bc200)
+	F:/projects go/snippetBox/cmd/web/middleware.go:25 +0x182
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x14f9dc0?, 0xc0000e6000?}, 0xffffffffffffffff?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).recoverPanic.func1({0x14f9dc0?, 0xc0000e6000?}, 0x278abf90aa8?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:37 +0x93
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x14f9dc0?, 0xc0000e6000?}, 0xdf85b5?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+net/http.serverHandler.ServeHTTP({0xc00008d6b0?}, {0x14f9dc0, 0xc0000e6000}, 0xc0000bc200)
+	C:/Program Files/Go/src/net/http/server.go:2947 +0x30c
+net/http.(*conn).serve(0xc0000015e0, {0x14fa4f8, 0xc0002089f0})
+	C:/Program Files/Go/src/net/http/server.go:1991 +0x607
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3102 +0x4db
+INFO	2023/11/19 19:28:30 Starting server on :4000
+INFO	2023/11/19 19:28:53 [::1]:65086 - HTTP/1.1 GET /
+ERROR	2023/11/19 19:28:53 handlers.go:20: no such table: snippets
+goroutine 16 [running]:
+runtime/debug.Stack()
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0x65
+main.(*application).serverError(0xc000200d20, {0x14a9950, 0xc0001a80a0}, {0x14a7940?, 0xc0001a6a80?})
+	F:/projects go/snippetBox/cmd/web/helpers.go:14 +0x58
+main.(*application).home(0xc000200d20, {0x14a9950, 0xc0001a80a0}, 0xc0001b2153?)
+	F:/projects go/snippetBox/cmd/web/handlers.go:20 +0xb5
+net/http.HandlerFunc.ServeHTTP(0xc000001400?, {0x14a9950?, 0xc0001a80a0?}, 0x0?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/alexedwards/scs/v2.(*SessionManager).LoadAndSave.func1({0x14a9da0, 0xc0001d6000}, 0xc000290000)
+	C:/Users/mnd33/go/pkg/mod/github.com/alexedwards/scs/v2@v2.5.0/session.go:148 +0x216
+net/http.HandlerFunc.ServeHTTP(0x2?, {0x14a9da0?, 0xc0001d6000?}, 0x17e0db8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+github.com/julienschmidt/httprouter.(*Router).Handler.func1({0x14a9da0?, 0xc0001d6000?}, 0xc0001a2060?, {0x0?, 0x0?, 0xf00001dc9fc60a28?})
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:275 +0x196
+github.com/julienschmidt/httprouter.(*Router).ServeHTTP(0xc00007cc00, {0x14a9da0, 0xc0001d6000}, 0xc000290000)
+	C:/Users/mnd33/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:387 +0x81c
+main.secureHeaders.func1({0x14a9da0, 0xc0001d6000}, 0x4?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:18 +0x3af
+net/http.HandlerFunc.ServeHTTP(0xc0000a4050?, {0x14a9da0?, 0xc0001d6000?}, 0xc00010b9c8?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).logRequest.func1({0x14a9da0, 0xc0001d6000}, 0xc000290000)
+	F:/projects go/snippetBox/cmd/web/middleware.go:25 +0x182
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x14a9da0?, 0xc0001d6000?}, 0xffffffffffffffff?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+main.(*application).recoverPanic.func1({0x14a9da0?, 0xc0001d6000?}, 0x1dcc56e31f8?)
+	F:/projects go/snippetBox/cmd/web/middleware.go:37 +0x93
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x14a9da0?, 0xc0001d6000?}, 0xda85b5?)
+	C:/Program Files/Go/src/net/http/server.go:2109 +0x2f
+net/http.serverHandler.ServeHTTP({0xc000282030?}, {0x14a9da0, 0xc0001d6000}, 0xc000290000)
+	C:/Program Files/Go/src/net/http/server.go:2947 +0x30c
+net/http.(*conn).serve(0xc0000014a0, {0x14aa4d8, 0xc000201260})
+	C:/Program Files/Go/src/net/http/server.go:1991 +0x607
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3102 +0x4db
+INFO	2023/11/19 19:30:23 Starting server on :4000
+INFO	2023/11/19 19:30:28 [::1]:51173 - HTTP/1.1 GET /
+INFO	2023/11/19 19:30:28 [::1]:51173 - HTTP/1.1 GET /static/css/main.css
+INFO	2023/11/19 19:30:28 [::1]:51174 - HTTP/1.1 GET /static/js/main.js
+INFO	2023/11/19 19:30:29 [::1]:51173 - HTTP/1.1 GET /static/img/logo.png
+INFO	2023/11/19 19:30:43 [::1]:51173 - HTTP/1.1 GET /snippet/create
+INFO	2023/11/19 19:30:46 [::1]:51173 - HTTP/1.1 POST /snippet/create
+INFO	2023/11/19 19:30:49 [::1]:51173 - HTTP/1.1 POST /snippet/create
+INFO	2023/11/19 19:30:52 [::1]:51173 - HTTP/1.1 GET /
+INFO	2023/11/19 19:30:53 [::1]:51173 - HTTP/1.1 GET /snippet/view/2
+INFO	2023/11/19 19:31:20 [::1]:51173 - HTTP/1.1 GET /snippet/view/2
+INFO	2023/11/19 19:31:20 [::1]:51173 - HTTP/1.1 GET /static/img/favicon.ico
+INFO	2023/11/19 19:31:21 [::1]:51173 - HTTP/1.1 GET /snippet/create
+INFO	2023/11/19 19:31:23 [::1]:51173 - HTTP/1.1 POST /snippet/create
+INFO	2023/11/19 19:31:23 [::1]:51173 - HTTP/1.1 GET /snippet/view/3
+INFO	2023/11/19 19:31:25 [::1]:51173 - HTTP/1.1 GET /
+INFO	2023/11/19 19:31:26 [::1]:51173 - HTTP/1.1 GET /
+INFO	2023/11/19 19:31:27 [::1]:51173 - HTTP/1.1 GET /
+INFO	2023/11/19 19:31:27 [::1]:51173 - HTTP/1.1 GET /
