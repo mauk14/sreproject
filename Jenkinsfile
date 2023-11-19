@@ -13,7 +13,7 @@ pipeline {
         stage('Run Project') {
             steps {
                 // Run your Node.js project
-                sh 'nohup /home/ec2-user/sreproject/sreproject'
+                sh 'nohup sudo /home/ec2-user/sreproject/sreproject'
             }
         }
     }
