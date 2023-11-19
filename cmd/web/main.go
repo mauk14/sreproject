@@ -33,14 +33,14 @@ func main() {
 	infoLog := log.New(os.Stdout, "INFO\t", log.Ldate|log.Ltime)
 	errorLog := log.New(os.Stderr, "ERROR\t", log.Ldate|log.Ltime|log.Lshortfile)
 
-	logFile, err := os.OpenFile("app.log", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
-	if err != nil {
-		log.Fatal("Error opening log file:", err)
-	}
-	defer logFile.Close()
+	//logFile, err := os.OpenFile("app.log", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	//if err != nil {
+	//	log.Fatal("Error opening log file:", err)
+	//}
+	//defer logFile.Close()
 
-	infoLog.SetOutput(logFile)
-	errorLog.SetOutput(logFile)
+	//infoLog.SetOutput(logFile)
+	//errorLog.SetOutput(logFile)
 
 	db, err := openDB(*dsn)
 	if err != nil {
