@@ -10,13 +10,6 @@ pipeline {
             }
         }
 
-        stage('Building Project') {
-            steps {
-                // Use Node.js to install project dependencies
-                sh 'go build -o sreproject ./cmd/web'
-            }
-        }
-
         stage('Run Project') {
             steps {
                 // Run your Node.js project
